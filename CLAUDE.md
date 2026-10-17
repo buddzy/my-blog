@@ -141,6 +141,12 @@ npx serve .
 
 그다음 브라우저에서 `http://localhost:8000`을 엽니다.
 
+## 배포 (GitHub Pages)
+
+- 저장소: `https://github.com/buddzy/my-blog`. `main` 브랜치의 루트(`/`)를 그대로 배포합니다. 빌드 단계는 없고, 푸시하면 1~2분 뒤 `https://buddzy.github.io/my-blog/`에 반영됩니다.
+- 루트의 `.nojekyll` 파일은 지우지 않습니다. 이 파일이 없으면 GitHub Pages가 Jekyll로 frontmatter가 있는 `posts/*.md`를 HTML로 바꿔버려서 `fetch()`로 원본 마크다운을 불러올 수 없습니다.
+- 사이트가 `/my-blog/` 하위 경로에서 열리므로, HTML·CSS·JS의 경로는 항상 상대 경로(`css/style.css`, `posts/…`)로 씁니다. `/`로 시작하는 절대 경로는 쓰지 않습니다.
+
 ## 작업 시 확인 사항
 
 변경 후에는 다음을 확인합니다.
